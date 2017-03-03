@@ -1,3 +1,7 @@
+'use strict';
+
+var constants = require('./constants.js');
+
 /**
  * Get time from Rise epoch.
  * @param {number|undefined} time Time in unix seconds
@@ -5,7 +9,7 @@
  */
 
 function beginEpochTime () {
-	var d = new Date(Date.UTC(2016, 4, 24, 17, 0, 0, 0));
+	var d = constants.epochTime;
 
 	return d;
 }
@@ -22,8 +26,8 @@ function getEpochTime (time) {
 }
 
 module.exports = {
-	interval: 30,
-	delegates: 101,
+	interval: 10,
+	delegates: constants.activeDelegates,
 
 	getTime: function (time) {
 		return getEpochTime(time);
@@ -31,7 +35,7 @@ module.exports = {
 
 	getRealTime: function (epochTime) {
 		if (epochTime === undefined) {
-			epochTime = this.getTime()
+			epochTime = this.getTime();
 		}
 
 		var d = beginEpochTime();
@@ -65,4 +69,4 @@ module.exports = {
 	roundTime: function (date) {
 		return Math.floor(date.getTime() / 1000) * 1000;
 	}
-}
+};
