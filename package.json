@@ -1,4 +1,5 @@
 {
+  "name": "rise-classic",
   "version": "0.5.0",
   "private": true,
   "scripts": {
@@ -7,6 +8,7 @@
     "travis": "./node_modules/.bin/grunt travis --verbose",
     "fetchCoverage": "./node_modules/.bin/grunt exec:fetchCoverage --verbose"
   },
+  "author": "Mody1996 <mohamed.tarek44@gmail.com>",
   "dependencies": {
     "async": "=2.1.4",
     "body-parser": "=1.16.0",
