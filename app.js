@@ -100,7 +100,6 @@ var config = {
 		delegates: './modules/delegates.js',
 		rounds: './modules/rounds.js',
 		multisignatures: './modules/multisignatures.js',
-		dapps: './modules/dapps.js',
 		crypto: './modules/crypto.js',
 		sql: './modules/sql.js'
 	}
